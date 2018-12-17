@@ -72,13 +72,16 @@ function main(){
   const diskriminant = diskrim(kv, lin, ab);
   if(diskriminant>0){
     console.log((-lin + diskriminant**0.5)/(2*kv))
-    if (round(diskriminant,1)===diskriminant){
-      document.getElementById("vysledek").innerHTML = "x<sub>1</sub> = " + (-lin + diskriminant**0.5)/(2*kv) + "   x<sub>2</sub> = " + (-lin - diskriminant**0.5)/(2*kv)
-    }
+/*    if (round(diskriminant,1)===diskriminant){*/
+      document.getElementById("vysledek").innerHTML = "x<sub>1</sub> = " + (-lin + diskriminant**0.5)/(2*kv) + "   x<sub>2</sub> = " + (-lin - diskriminant**0.5)/(2*kv);
+      document.getElementById("b").innerHTML = lin;
+      document.getElementById("D").innerHTML = diskriminant;
+      document.getElementById("a").innerHTML = 2*a;
+  /*  }
     else{
       document.getElementById("vysledek").innerHTML = "\( x_1 = \frac{-" + lin + "+ \sqrt{" + diskriminant +"}}{"+ 2*a +"}\)"  +  "   \( x_1 = \frac{-" + lin + "- \sqrt{" + diskriminant +"}}{"+ 2*a +"}\)";
       //zápis x v latexu x_1=\frac{-b + \sqrt{D}}{2a}
-    }
+    }*/
   }
   if(diskriminant === 0){
     let x = -lin/2*kv;
